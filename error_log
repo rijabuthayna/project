@@ -1,0 +1,208 @@
+[02-Nov-2018 22:32:30 UTC] PHP Parse error:  syntax error, unexpected 'isset' (T_ISSET), expecting '(' in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 45
+[02-Nov-2018 22:33:48 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 83
+[02-Nov-2018 22:34:14 UTC] PHP Notice:  Undefined index: andrewID in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 43
+[02-Nov-2018 22:34:35 UTC] PHP Notice:  Undefined index: andrewID in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 43
+[02-Nov-2018 22:35:58 UTC] PHP Notice:  Undefined index: andrewID in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 43
+[02-Nov-2018 22:37:24 UTC] PHP Notice:  Undefined index: andrewID in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 43
+[02-Nov-2018 22:40:58 UTC] PHP Notice:  Undefined index: andrewID in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 43
+[02-Nov-2018 22:40:58 UTC] PHP Notice:  Array to string conversion in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 46
+[02-Nov-2018 22:43:52 UTC] PHP Notice:  Array to string conversion in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 46
+[02-Nov-2018 22:43:52 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:43:52 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:43:52 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[02-Nov-2018 22:43:52 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 52
+[02-Nov-2018 22:43:52 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 53
+[02-Nov-2018 22:45:22 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 47
+[02-Nov-2018 22:45:22 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 48
+[02-Nov-2018 22:45:22 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:45:22 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:45:22 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[02-Nov-2018 22:46:38 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 47
+[02-Nov-2018 22:46:38 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 48
+[02-Nov-2018 22:46:38 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:46:38 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:46:38 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[02-Nov-2018 22:46:41 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 47
+[02-Nov-2018 22:46:41 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 48
+[02-Nov-2018 22:46:41 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:46:41 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:46:41 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[02-Nov-2018 22:47:58 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 47
+[02-Nov-2018 22:47:58 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 48
+[02-Nov-2018 22:47:58 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:47:58 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:47:58 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[02-Nov-2018 22:47:58 UTC] PHP Notice:  Undefined variable: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 58
+[02-Nov-2018 22:48:23 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 47
+[02-Nov-2018 22:48:23 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 48
+[02-Nov-2018 22:48:23 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:48:23 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:48:23 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[02-Nov-2018 22:48:57 UTC] PHP Notice:  Undefined index: StudentName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 47
+[02-Nov-2018 22:48:57 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 48
+[02-Nov-2018 22:48:57 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:48:57 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:48:57 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[02-Nov-2018 22:51:14 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 47
+[02-Nov-2018 22:51:14 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 48
+[02-Nov-2018 22:51:14 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 49
+[02-Nov-2018 22:51:14 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 50
+[02-Nov-2018 22:51:14 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/editstudent.php on line 51
+[03-Nov-2018 11:29:37 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 45
+[03-Nov-2018 11:29:37 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 46
+[03-Nov-2018 11:29:37 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 47
+[03-Nov-2018 11:29:37 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 48
+[03-Nov-2018 11:29:37 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 49
+[03-Nov-2018 11:30:25 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 45
+[03-Nov-2018 11:30:25 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 46
+[03-Nov-2018 11:30:25 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 47
+[03-Nov-2018 11:30:25 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 48
+[03-Nov-2018 11:30:25 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 49
+[03-Nov-2018 11:49:08 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 76
+[03-Nov-2018 11:49:23 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 76
+[03-Nov-2018 11:51:39 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[03-Nov-2018 11:51:39 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[03-Nov-2018 11:53:08 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[03-Nov-2018 11:53:08 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[03-Nov-2018 17:19:51 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/sucezv20k5qo/public_html/Project/AdminRegistrationformscript.php on line 41
+[03-Nov-2018 17:20:13 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/sucezv20k5qo/public_html/Project/AdminRegistrationformscript.php on line 41
+[03-Nov-2018 17:21:23 UTC] PHP Notice:  Undefined variable: andrewID in /home/sucezv20k5qo/public_html/Project/AdminRegistrationformscript.php on line 41
+[03-Nov-2018 17:21:23 UTC] PHP Notice:  Undefined variable: andrewID in /home/sucezv20k5qo/public_html/Project/AdminRegistrationformscript.php on line 42
+[03-Nov-2018 17:21:23 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/sucezv20k5qo/public_html/Project/AdminRegistrationformscript.php on line 44
+[03-Nov-2018 17:40:01 UTC] PHP Parse error:  syntax error, unexpected '';' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/sucezv20k5qo/public_html/Project/AdminRegistrationList.php on line 54
+[04-Nov-2018 09:30:16 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 44
+[04-Nov-2018 09:30:16 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 45
+[04-Nov-2018 09:30:16 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 46
+[04-Nov-2018 09:30:16 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 47
+[04-Nov-2018 09:30:16 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 48
+[04-Nov-2018 09:30:16 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 49
+[04-Nov-2018 09:30:16 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 50
+[04-Nov-2018 09:30:23 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 09:30:23 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 09:38:17 UTC] PHP Notice:  Undefined offset: 0 in /home/sucezv20k5qo/public_html/Project/Scourselist.php on line 44
+[04-Nov-2018 09:38:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/Scourselist.php on line 47
+[04-Nov-2018 09:38:17 UTC] PHP Notice:  Undefined offset: 1 in /home/sucezv20k5qo/public_html/Project/Scourselist.php on line 44
+[04-Nov-2018 09:38:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/Scourselist.php on line 47
+[04-Nov-2018 09:38:17 UTC] PHP Notice:  Undefined offset: 2 in /home/sucezv20k5qo/public_html/Project/Scourselist.php on line 44
+[04-Nov-2018 09:38:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/Scourselist.php on line 47
+[04-Nov-2018 10:29:32 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 10:29:32 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 10:35:27 UTC] PHP Notice:  Undefined index: cnumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 5
+[04-Nov-2018 10:35:27 UTC] PHP Notice:  Undefined index: cnumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 10:35:32 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 10:35:32 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 10:38:38 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 10:38:38 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 10:48:02 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 10:48:02 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 10:49:07 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 10:49:07 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 10:49:34 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 10:49:34 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:02:20 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 11:02:20 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:07:30 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 11:07:30 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:09:11 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 11:09:11 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:12:02 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 11:12:02 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:14:16 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 11:14:16 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 11:14:40 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 11:14:40 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:14:40 UTC] PHP Notice:  Undefined index: courses in /home/sucezv20k5qo/public_html/Project/addreg.php on line 31
+[04-Nov-2018 11:14:40 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/sucezv20k5qo/public_html/Project/addreg.php on line 31
+[04-Nov-2018 11:16:12 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 11:16:12 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:17:27 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 29
+[04-Nov-2018 11:17:27 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addreg.php on line 30
+[04-Nov-2018 11:25:32 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/sucezv20k5qo/public_html/Project/addreg.php on line 42
+[04-Nov-2018 12:48:22 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 31
+[04-Nov-2018 12:48:42 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/addreg.php on line 31
+[04-Nov-2018 12:52:26 UTC] PHP Notice:  Undefined index: PK in /home/sucezv20k5qo/public_html/Project/delete.php on line 37
+[04-Nov-2018 12:52:26 UTC] PHP Notice:  Undefined index: ARRAY in /home/sucezv20k5qo/public_html/Project/delete.php on line 38
+[04-Nov-2018 12:52:31 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 12:52:31 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 12:55:13 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 12:55:13 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 13:07:14 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 44
+[04-Nov-2018 13:07:14 UTC] PHP Notice:  Undefined index: StudentFName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 45
+[04-Nov-2018 13:07:14 UTC] PHP Notice:  Undefined index: StudentLName in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 46
+[04-Nov-2018 13:07:14 UTC] PHP Notice:  Undefined index: StudentYear in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 47
+[04-Nov-2018 13:07:14 UTC] PHP Notice:  Undefined index: Major in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 48
+[04-Nov-2018 13:07:14 UTC] PHP Notice:  Undefined index: BirthDate in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 49
+[04-Nov-2018 13:07:14 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 50
+[04-Nov-2018 13:07:18 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 13:07:18 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 14:00:03 UTC] PHP Notice:  Undefined variable: name in /home/sucezv20k5qo/public_html/Project/addcourseformscript.php on line 60
+[04-Nov-2018 14:12:27 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/sucezv20k5qo/public_html/Project/addcourseformscript.php on line 57
+[04-Nov-2018 14:21:12 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 14:21:12 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 15:43:04 UTC] PHP Notice:  Undefined index: Andrewid in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 39
+[04-Nov-2018 15:43:04 UTC] PHP Notice:  Undefined index:  in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 40
+[04-Nov-2018 15:43:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 40
+[04-Nov-2018 15:44:19 UTC] PHP Notice:  Undefined index: userID in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 39
+[04-Nov-2018 15:44:19 UTC] PHP Notice:  Undefined index:  in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:44:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:45:31 UTC] PHP Notice:  Undefined index: userID in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 39
+[04-Nov-2018 15:45:31 UTC] PHP Notice:  Undefined index:  in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:45:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:48:46 UTC] PHP Notice:  Undefined index: userID in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 39
+[04-Nov-2018 15:48:46 UTC] PHP Notice:  Undefined index:  in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:48:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:49:53 UTC] PHP Notice:  Undefined index: PK in /home/sucezv20k5qo/public_html/Project/delete.php on line 37
+[04-Nov-2018 15:49:53 UTC] PHP Notice:  Undefined index: ARRAY in /home/sucezv20k5qo/public_html/Project/delete.php on line 38
+[04-Nov-2018 15:50:12 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sucezv20k5qo/public_html/Project/addreg.php on line 77
+[04-Nov-2018 15:50:28 UTC] PHP Notice:  Undefined index: userID in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 39
+[04-Nov-2018 15:50:28 UTC] PHP Notice:  Undefined index:  in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:50:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 41
+[04-Nov-2018 15:51:09 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sucezv20k5qo/public_html/Project/addreg.php on line 77
+[04-Nov-2018 15:54:05 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 15:54:05 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 15:55:52 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 15:55:52 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 15:56:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 44
+[04-Nov-2018 15:56:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 44
+[04-Nov-2018 15:58:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 44
+[04-Nov-2018 15:58:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 44
+[04-Nov-2018 16:04:31 UTC] PHP Notice:  Undefined index: CourseNumber in /home/sucezv20k5qo/public_html/Project/deleteReg.php on line 40
+[04-Nov-2018 16:17:14 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/sucezv20k5qo/public_html/Project/deleteReg.php on line 47
+[04-Nov-2018 16:28:14 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/sucezv20k5qo/public_html/Project/deleteReg.php on line 42
+[04-Nov-2018 16:28:42 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/sucezv20k5qo/public_html/Project/deleteReg.php on line 49
+[04-Nov-2018 16:28:53 UTC] PHP Parse error:  syntax error, unexpected 'users' (T_STRING) in /home/sucezv20k5qo/public_html/Project/deleteReg.php on line 50
+[04-Nov-2018 16:30:14 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 16:30:14 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 16:31:51 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 16:31:51 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 16:35:40 UTC] PHP Notice:  Undefined index: userID in /home/sucezv20k5qo/public_html/Project/deleteReg.php on line 46
+[04-Nov-2018 16:36:20 UTC] PHP Warning:  Illegal string offset 'type' in /home/sucezv20k5qo/public_html/Project/deleteReg.php on line 46
+[04-Nov-2018 16:37:10 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 16:37:10 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 18:06:34 UTC] PHP Notice:  Undefined index: PK in /home/sucezv20k5qo/public_html/Project/delete.php on line 37
+[04-Nov-2018 18:06:34 UTC] PHP Notice:  Undefined index: ARRAY in /home/sucezv20k5qo/public_html/Project/delete.php on line 38
+[04-Nov-2018 18:06:37 UTC] PHP Notice:  Undefined index: PK in /home/sucezv20k5qo/public_html/Project/delete.php on line 37
+[04-Nov-2018 18:06:37 UTC] PHP Notice:  Undefined index: ARRAY in /home/sucezv20k5qo/public_html/Project/delete.php on line 38
+[04-Nov-2018 18:06:39 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 18:06:39 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 18:12:25 UTC] PHP Notice:  Undefined variable: AndrewID in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 66
+[04-Nov-2018 18:12:25 UTC] PHP Notice:  Undefined variable: err03S in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 73
+[04-Nov-2018 18:13:32 UTC] PHP Notice:  Undefined variable: AndrewID in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 66
+[04-Nov-2018 18:13:32 UTC] PHP Notice:  Undefined variable: err03S in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 73
+[04-Nov-2018 18:13:49 UTC] PHP Notice:  Undefined variable: AndrewID in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 66
+[04-Nov-2018 18:13:49 UTC] PHP Notice:  Undefined variable: err03S in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 73
+[04-Nov-2018 18:18:14 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 18:18:14 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 18:24:48 UTC] PHP Notice:  Undefined variable: AndrewID in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 66
+[04-Nov-2018 18:24:48 UTC] PHP Notice:  Undefined variable: err03S in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 73
+[04-Nov-2018 18:55:12 UTC] PHP Notice:  Undefined variable: date in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 76
+[04-Nov-2018 19:03:50 UTC] PHP Notice:  Undefined index: AndrewID in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 34
+[04-Nov-2018 19:03:50 UTC] PHP Notice:  Undefined index: Password in /home/sucezv20k5qo/public_html/Project/loginscript.php on line 35
+[04-Nov-2018 19:36:38 UTC] PHP Notice:  Undefined index: userID in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 38
+[04-Nov-2018 19:36:38 UTC] PHP Notice:  Undefined index:  in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 40
+[04-Nov-2018 19:36:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sucezv20k5qo/public_html/Project/StudentRegistrationList.php on line 40
+[05-Nov-2018 14:50:08 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/sucezv20k5qo/public_html/Project/addadminformscript.php on line 46
+[05-Nov-2018 15:24:00 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sucezv20k5qo/public_html/Project/addstudentformscript.php on line 106
+[05-Nov-2018 15:43:52 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/sucezv20k5qo/public_html/Project/addcourseformscript.php on line 72
+[05-Nov-2018 15:46:19 UTC] PHP Parse error:  syntax error, unexpected 'or' (T_LOGICAL_OR) in /home/sucezv20k5qo/public_html/Project/addcourseformscript.php on line 77
+[05-Nov-2018 15:51:57 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/sucezv20k5qo/public_html/Project/addcourseformscript.php on line 69
