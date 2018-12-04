@@ -1,25 +1,16 @@
+<?php
+session_start();
+if($_SESSION['type']!='student'){
+echo '<script type="text/javascript">
+alert("You do not have access to this page, log in again");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+?>
 <!DOCTYPE html> 
-<html> 
-
+<html>
 <style>
 
-.b1 {
-color:#FFFFFF;
-display:inline-block;
-padding:0.3em 1.2em;
-margin:0 0.1em 0.1em 0;
-border:0.16em solid rgba(255,255,255,0);
-border-radius:2em;
-box-sizing: border-box;
-font-size: 16px;
-background-color: #4CAF50;
- 
-}
-
-.b1:hover{
-color:#FFFFFF;
-background-color:#228300;
-}
 
 /* unvisited link */
 a:link {
@@ -87,10 +78,10 @@ table, th, td {
 font-size: 24px;
 position: absolute;
 top: 15.5%;
-  left:10.9%;
+  left: 10.9%;
 margin: auto;
     width: 50%;
-    height: 800px;
+
     width: 1000px;
         background-color: #FAF6F1;
         
@@ -110,7 +101,7 @@ margin: auto;
 body{
 color: #92a8d1;
 background-image: url("tprint.png");
-}
+} 
 </style> 
 <head> 
 <title></title> 
@@ -122,7 +113,7 @@ background-image: url("tprint.png");
 
 <h2 class="topright2">For andrewid </h2> 
 
-<h2 class="topright3"><a href="http://www.dbproject14.net/Project/Scourselist.php">Logout</a></h2> 
+<h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
 
 <h2 class="topleft2">  Qatar </h2>
@@ -131,9 +122,10 @@ background-image: url("tprint.png");
 <br/>
 <br/>
 
-
 </div>
+
 <div class="upper" align="center">
+
 <table style="width:100%" bgcolor="DarkRed">
   <tr>
     <th><a href="http://www.dbproject14.net/Project/studentprofileview.php">View Profile</a></th>
@@ -142,79 +134,75 @@ background-image: url("tprint.png");
     <th><a href="http://www.dbproject14.net/Project/StudentRegistrationList.php">Registrations</a></th> 
     <th><a href="http://www.dbproject14.net/Project/studentcoursedrops.php">View Course Drops </a> </th>
 
+   
+
   </tr>
   </table>
-<h3>These are Andrewid's courses! </h3>
+
+<?php
+echo "<h2>Grades for ".$_SESSION['username']."</h2>";
+
+?>
+<br>
+<h3>These are your taken courses & grades from past semesters! </h3>
 <br>
 
 	<table style="width:100%" font-size: 24px;>
   <tr>
-    <th>Course Number</th>
-    <th>Course Name</th> 
-    <th>Course Sections</th>
-    <th>Unit Number</th>
-    <th>View Course Profile or Drop</th>
+  <th>Course Number</th>
+  <th>Course Name</th>
+  <th>Grade</th>
+  <th>Grade Type</th>
+  
+  <th>Semester Taken</th>
     
-
+ 
   </tr>
-<!-- Sample row -->  
-  <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
 
--->
-<input type="submit" class="b1" value="View"> 
-</form> 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form> 
-  </th> 
 
-  
-  </tr>
-<!-- Sample row end --> 
 
-<!-- Sample row -->  
-  <tr>
-  <th>15112</th>
-  <th>Python</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
+<?php
+$andrewID = $_SESSION['username']; 
 
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
+$dbServerName = "localhost";
+$dbUsername = "inclass6bmulla";
+$dbPassword = "admin";
+$dbName = "sio_rb";
 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form>
-  </th> 
+// create connection
+$conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
 
-  
-  </tr>
-<!-- Sample row end --> 
+//sql statement to select one guest based on last name
+//$sql = "SELECT Cnumber,grade,GradeOrPassFail,TakenSemester FROM taken  WHERE Sandrewid ='".$_SESSION['username']."'";
 
-</table>
+$sql = "SELECT taken.Cnumber,course.Cname,taken.grade,taken.GradeOrPassFail,taken.TakenSemester FROM taken INNER JOIN course ON taken.Cnumber=course.Cnumber WHERE taken.Sandrewid ='".$_SESSION['username']."'";
+$result = $conn->query($sql);
 
+if ($result->num_rows > 0) {
+
+while($row = $result->fetch_assoc()) {
+echo "<tr>".
+  "<th>".$row["Cnumber"]."</th>".
+  "<th>".$row["Cname"]."</th>".
+  "<th>".$row["grade"]."</th>".
+  "<th>".$row["GradeOrPassFail"]."</th>".
+  "<th>".$row["TakenSemester"]."</th> </tr>";
+
+
+
+}
+} else {
+echo "<br>No grades to show for now";
+}
+echo "</table>";
+$conn->close();           
+?>
 
 
 </div>
-
 </body> 
 </html> 

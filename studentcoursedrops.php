@@ -1,3 +1,12 @@
+<?php
+session_start();
+if($_SESSION['type']!='student'){
+echo '<script type="text/javascript">
+alert("You do not have access to this page, log in again");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+?>
 <!DOCTYPE html> 
 <html> 
 
@@ -144,73 +153,66 @@ background-image: url("tprint.png");
 
   </tr>
   </table>
-<h3>These are Andrewid's courses! </h3>
+  <?php
+echo "<h3>Courses Dropped by ".$_SESSION['username']."</h3>";
+
+?>
+
 <br>
 
 	<table style="width:100%" font-size: 24px;>
   <tr>
+  <th>Section Key</th>
     <th>Course Number</th>
-    <th>Course Name</th> 
-    <th>Course Sections</th>
-    <th>Unit Number</th>
-    <th>View Course Profile or Drop</th>
+    <th>Course Name</th>
+    <th>Semester Dropped</th>
+    <th>Drop Reason</th>
+    <th>Drop Date</th>
+    
     
 
   </tr>
-<!-- Sample row -->  
-  <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
+<?php
+$andrewID = $_SESSION['username']; 
 
--->
-<input type="submit" class="b1" value="View"> 
-</form> 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form> 
-  </th> 
+$dbServerName = "localhost";
+$dbUsername = "inclass6bmulla";
+$dbPassword = "admin";
+$dbName = "sio_rb";
 
-  
-  </tr>
-<!-- Sample row end --> 
+// create connection
+$conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
 
-<!-- Sample row -->  
-  <tr>
-  <th>15112</th>
-  <th>Python</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
+//sql statement to select one guest based on last name
+//$sql = "SELECT Skey,Cnumber,Semester,reason,DropDate FROM dropped  WHERE Sandrewid ='".$_SESSION['username']."'";
+$sql = "SELECT dropped.Skey,dropped.Cnumber,course.Cname,dropped.Semester,dropped.reason,dropped.DropDate FROM dropped INNER JOIN course ON dropped.Cnumber=course.Cnumber  WHERE dropped.Sandrewid ='".$_SESSION['username']."'";
 
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
+$result = $conn->query($sql);
 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form>
-  </th> 
+if ($result->num_rows > 0) {
 
-  
-  </tr>
-<!-- Sample row end --> 
+while($row = $result->fetch_assoc()) {
+echo "<tr>".
+"<th>".$row["Skey"]."</th>".
+  "<th>".$row["Cnumber"]."</th>".
+  "<th>".$row["Cname"]."</th>".
+  "<th>".$row["Semester"]."</th>".
+  "<th>".$row["reason"]."</th>".
+  "<th>".$row["DropDate"]."</th> </tr>";
 
-</table>
+
+
+}
+} else {
+echo "<br>No courses dropped as yet";
+}
+echo "</table>";
+$conn->close();           
+?>
 
 
 

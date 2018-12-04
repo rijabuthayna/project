@@ -130,8 +130,6 @@ background-image: url("tprint.png");
 <br/>
 <br/>
 <br/>
-
-
 </div>
 <div class="upper" align="center">
 <table style="width:100%" bgcolor="DarkRed">
@@ -144,77 +142,75 @@ background-image: url("tprint.png");
 
   </tr>
   </table>
-<h3>These are Andrewid's courses! </h3>
-<br>
+<h3>Profile of course name, course number </h3>
 
+<h4>Unit number is: ## </h4>
+
+<h4> Section List </h4>
+<br>
 	<table style="width:100%" font-size: 24px;>
   <tr>
     <th>Course Number</th>
     <th>Course Name</th> 
     <th>Course Sections</th>
     <th>Unit Number</th>
-    <th>View Course Profile or Drop</th>
+    <th>Semesters Offered</th>
+<th>Section key</th>
     
+    <th>Add Deadline</th> 
+    <th>Student Capacity</th>
+    <th>Waitlist Limit</th>
+    <th>Section StartDate</th>
+    <th>Section EndDate</th>
+    <th>Drop Deadline</th>    
 
   </tr>
 <!-- Sample row -->  
   <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
-
--->
-<input type="submit" class="b1" value="View"> 
-</form> 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form> 
-  </th> 
-
-  
+  <th>21127</th>
+  <th>Concepts</th>
+  <th>W</th>
+  <th>9</th>
+<th>Fall 2016,Spring 2017</th>
+<th> -- </th>
+<th>25-1-2018</th>
+<th>55</th>
+<th> 10 </th>
+<th>25-1-2018</th>
+    <th>25-5-2018</th>
+<th>2-2-2018</th>  
   </tr>
 <!-- Sample row end --> 
-
-<!-- Sample row -->  
-  <tr>
-  <th>15112</th>
-  <th>Python</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
-
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
-
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form>
-  </th> 
-
-  
-  </tr>
-<!-- Sample row end --> 
-
 </table>
+<h4> Course Description </h4>
+<h5> asdasd fdsffe fdfds vdsfsfs fdsfdsfds fdsfdsfds fdsfdsfds csdvgbthn nhtnyujfvd vfrynu vdvfdvd sdcsdvdsv </h5>
 
+<h4> Key Topics </h4>
+<h5> asdasd fdsffe fdfds vdsfsfs fdsfdsfds fdsfdsfds fdsfdsfds csdvgbthn nhtnyujfvd vfrynu vdvfdvd sdcsdvdsv </h5>
 
+<h4> Course Goals </h4>
+<h5> asdasd fdsffe fdfds vdsfsfs fdsfdsfds fdsfdsfds fdsfdsfds csdvgbthn nhtnyujfvd vfrynu vdvfdvd sdcsdvdsv </h5>
 
 </div>
 
 </body> 
-</html> 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

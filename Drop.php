@@ -1,0 +1,1 @@
+This file will take a student id and a course id, sectionid and semester and drop that course for that student

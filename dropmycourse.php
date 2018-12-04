@@ -1,25 +1,16 @@
+<?php
+session_start();
+if($_SESSION['type']!='student'){
+echo '<script type="text/javascript">
+alert("You do not have access to this page, log in again");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+?>
 <!DOCTYPE html> 
-<html> 
-
+<html>
 <style>
 
-.b1 {
-color:#FFFFFF;
-display:inline-block;
-padding:0.3em 1.2em;
-margin:0 0.1em 0.1em 0;
-border:0.16em solid rgba(255,255,255,0);
-border-radius:2em;
-box-sizing: border-box;
-font-size: 16px;
-background-color: #4CAF50;
- 
-}
-
-.b1:hover{
-color:#FFFFFF;
-background-color:#228300;
-}
 
 /* unvisited link */
 a:link {
@@ -87,10 +78,10 @@ table, th, td {
 font-size: 24px;
 position: absolute;
 top: 15.5%;
-  left:10.9%;
+  left: 10.9%;
 margin: auto;
     width: 50%;
-    height: 800px;
+    height: 600px;
     width: 1000px;
         background-color: #FAF6F1;
         
@@ -110,7 +101,8 @@ margin: auto;
 body{
 color: #92a8d1;
 background-image: url("tprint.png");
-}
+} 
+
 </style> 
 <head> 
 <title></title> 
@@ -122,7 +114,7 @@ background-image: url("tprint.png");
 
 <h2 class="topright2">For andrewid </h2> 
 
-<h2 class="topright3"><a href="http://www.dbproject14.net/Project/Scourselist.php">Logout</a></h2> 
+<h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
 
 <h2 class="topleft2">  Qatar </h2>
@@ -131,9 +123,10 @@ background-image: url("tprint.png");
 <br/>
 <br/>
 
-
 </div>
+
 <div class="upper" align="center">
+
 <table style="width:100%" bgcolor="DarkRed">
   <tr>
     <th><a href="http://www.dbproject14.net/Project/studentprofileview.php">View Profile</a></th>
@@ -142,79 +135,18 @@ background-image: url("tprint.png");
     <th><a href="http://www.dbproject14.net/Project/StudentRegistrationList.php">Registrations</a></th> 
     <th><a href="http://www.dbproject14.net/Project/studentcoursedrops.php">View Course Drops </a> </th>
 
+    
   </tr>
   </table>
-<h3>These are Andrewid's courses! </h3>
+
+
+
+<h2> The course [course number] has been dropped for Andrewid</h2>
 <br>
-
-	<table style="width:100%" font-size: 24px;>
-  <tr>
-    <th>Course Number</th>
-    <th>Course Name</th> 
-    <th>Course Sections</th>
-    <th>Unit Number</th>
-    <th>View Course Profile or Drop</th>
-    
-
-  </tr>
-<!-- Sample row -->  
-  <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
-
--->
-<input type="submit" class="b1" value="View"> 
-</form> 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form> 
-  </th> 
-
-  
-  </tr>
-<!-- Sample row end --> 
-
-<!-- Sample row -->  
-  <tr>
-  <th>15112</th>
-  <th>Python</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
-
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
-
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form>
-  </th> 
-
-  
-  </tr>
-<!-- Sample row end --> 
-
-</table>
-
+<h3>You can view it in your View Course Drops section</h3>
+<br/>
 
 
 </div>
-
 </body> 
 </html> 

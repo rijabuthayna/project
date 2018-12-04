@@ -1,80 +1,161 @@
 <?php 
 session_start();
-if(!isset($_SESSION['users'])){
-  $_array01= array("type"=>"admin", "password" =>"admin");
-  $_SESSION['users'] = array("admin"=> $_array01);
-}
-
-?>
-<!DOCTYPE html> 
-<html> 
-<style>
-.upper {
-margin: auto;
-    width: 50%;
-    background-color: white;
-
-height: 120px;
-    width: 500px;
-
-} 
-body{
-background-color: DarkRed;
-}
-</style> 
-<head> 
-<title></title> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-</head> 
-<body> 
-<div class="upper" align="center">
+$dbServerName = "localhost";
+$dbUsername = "inclass6bmulla";
+$dbPassword = "admin";
+$dbName = "sio_rb";
 
 
-<?php 
+
 $andrewID = $_POST['AndrewID']; 
-$password = $_POST['Password']; 
+$password = $_POST['password']; 
 
-//this error is true if username does not exist
+//this error is true if username is empty
 $err01 = false;
 $err01S = " "; 
-//this error is true if passwords does not match username
+//this error is true if passwords is empty
 $err02 = false;
 $err02S = " "; 
 
-if(!isset($_SESSION['users'][$andrewID])){
-  $err01 = true;
-  $err01S = "Andrew ID does not exist <br>"; 
+//this error is true if username does not exist
+$err03 = true;
+
+
+
+//if empty
+if (empty($andrewID)){
+$err01=true;
+$err01S = "Andrew ID is required,"; 
+}
+if (empty($password)){
+$err02=true;
+$err02S = "Password is required,"; 
 }
 
-if (isset($_SESSION['users'][$andrewID]) and $password != $_SESSION['users'][$andrewID]['password']){
-  $err02 = true;
-  $err02S = "Password does not match Andrew ID"; 
+//HEre we check that both user name and password were input
+if ($err01 or $err02){
+$err03 = false;
+echo '<script type="text/javascript">
+alert("'.$err01S.$err02S.'");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+
+
+}
+//Is the user an admin?
+else{
+
+
+//starting up the connection
+$conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
 }
 
 
+$sql = "SELECT * FROM admin";
+$result = $conn->query($sql);
 
-if ($err01==false and $err02==false){
-  $type = $_SESSION['users'][$andrewID]['type'];
-  
-  //temporary we might think of a better way of doing this
-  $_SESSION['userID']=$andrewID;
-  //temporary we might think of a better way of doing this
-  
-  echo "<h3> Welcome " . $type  . " <br> </h3>"; 
+if ($result->num_rows > 0) {
 
-  if ($type == 'student'){
-  //insert link to student link page
-    echo "<h3> <a href='http://www.dbproject14.net/Project/StudentHomePage.html'>Click here to continue</a> </h3>";
-  }
-  if ($type =='admin'){
-  //insert link to admin link page
-    echo "<h3> <a href='http://www.dbproject14.net/Project/AdminHomePage.html'>Click here to continue</a> </h3>";
-  }
+while($row = $result->fetch_assoc()) {
+
+if ($row["AandrewID"]==$andrewID ){
+
+if ($row['aPassword']==$password){
+
+$_SESSION['username']=$andrewID;
+$_SESSION['type']='admin';
+$err03 = false;
+echo '<script type="text/javascript">
+location="http://www.dbproject14.net/Project/AdminHomePage.php";
+</script>';
 }
-echo $err01S;
-echo $err02S;
-echo "<a href='http://www.dbproject14.net/Project/login.html'>Go back to Login</a>";
 
+else{
+$err03 = false;
+echo '<script type="text/javascript">
+alert("Password is incorrect");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+}
+}
+}
+
+//checking student
+$sql = "SELECT * FROM student";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+while($row = $result->fetch_assoc()) {
+
+if ($row["Sandrewid"]==$andrewID ){
+
+if ($row['SPassword']==$password){
+
+$_SESSION['username']=$andrewID;
+$_SESSION['type']='student';
+$err03 = false;
+echo '<script type="text/javascript">
+location="http://www.dbproject14.net/Project/StudentHomePage.php";
+</script>';
+}
+
+else{
+$err03 = false;
+echo '<script type="text/javascript">
+alert("Password is incorrect");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+}
+}
+}
+
+//checking professor
+$sql = "SELECT * FROM professor";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+while($row = $result->fetch_assoc()) {
+
+if ($row["PandrewID"]==$andrewID ){
+
+if ($row['pPassword']==$password){
+
+$_SESSION['username']=$andrewID;
+$_SESSION['type']='professor';
+$err03 = false;
+echo '<script type="text/javascript">
+location="http://www.dbproject14.net/Project/profhomepage.php";
+</script>';
+}
+
+else{
+$err03 = false;
+echo '<script type="text/javascript">
+alert("Password is incorrect");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+}
+}
+}
+
+$conn->close();
+}
+//we did not find a username
+
+if ($err03){
+echo '<script type="text/javascript">
+alert("Andrew ID does not exist");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
 ?>
 </div>
 </body> 
