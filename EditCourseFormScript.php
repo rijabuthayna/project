@@ -1,5 +1,6 @@
 <?php
-$CourseNumber = $_POST['CourseNumber']; 
+//edit course form script
+$CourseNumber = $_POST['Cnumber']; 
 $CourseName = $_POST['CourseName']; 
 $UnitNumber = $_POST['UnitNumber']; 
 $DepartmentNumber = $_POST['DepartmentNumber']; 
@@ -7,10 +8,6 @@ $Description = $_POST['Description'];
 $KeyTopics = $_POST['KeyTopics']; 
 $CourseGoals = $_POST['CourseGoals']; 
 
-
-//This one is true if CourseNumber is empty
-$err01=false;
-$err01S="";
 
 //This one is true if CourseName is empty
 $err02=false;
@@ -28,10 +25,6 @@ $err04S="";
 $err05=false;
 $err05S="";
 
-if (empty($CourseNumber)){
-$err01=true;
-$err01S="Course number is required, ";
-}
 
 if (empty($CourseName)){
 $err02=true;
@@ -67,10 +60,6 @@ $err07S="";
 $err08=false;
 $err08S="";
 
-if (!$err01 and !is_numeric($CourseNumber)){
-   $err06=true;
-   $err06S = "Course number must be a number, ";
-}
 
 if (!$err03 and !is_numeric($UnitNumber)){
    $err07=true;
@@ -98,43 +87,40 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 
-if (!$err01 and !$err06){
-$sql = "SELECT Cnumber FROM course WHERE Cnumber=".$CourseNumber;
-$result = $conn->query($sql);
-
-if ($result->num_rows != 0) {
-$err09=true;
-$err09S="Course number already exists, ";}
-}
 
 
-if ($err01  or $err02 or $err03 or $err04 or $err05 or $err06 or $err07 or $err08 or $err09){
+
+if ( $err02 or $err03 or $err04 or $err05 or $err07 or $err08){
 echo '<script type="text/javascript">
-alert("'.$err01S.$err02S.$err03S.$err04S.$err05S.$err06S.$err07S.$err08S.$err09S.'");
-location="http://www.dbproject14.net/Project/AddCourseForm.php";
+alert("'.$err02S.$err03S.$err04S.$err05S.$err07S.$err08S.'");
+location="http://www.dbproject14.net/Project/AdminViewCourses.php";
 </script>';
 
 }
 //So now we checked all errors and we know that we can add the course safely
 else {
 
-if(empty($KeyTopics) and empty($CourseGoals)){
-$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', NULL, NULL, '$DepartmentNumber')";
-}
-else if(empty($CourseGoals)){
-$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', '$KeyTopics', NULL, '$DepartmentNumber')";
-}
-else if(empty($KeyTopics)){
-$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', NULL, '$CourseGoals', '$DepartmentNumber')";
-}
-else{
-$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', '$KeyTopics', '$CourseGoals', '$DepartmentNumber')";
-}
+//if(empty($KeyTopics) and empty($CourseGoals)){
+//$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', NULL, NULL, '$DepartmentNumber')";
+//}
+//else if(empty($CourseGoals)){
+//$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', '$KeyTopics', NULL, '$DepartmentNumber')";
+//}
+//else if(empty($KeyTopics)){
+//$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', NULL, '$CourseGoals', '$DepartmentNumber')";
+//}
+//else{
+//$sql2 = "INSERT INTO course VALUES ('$CourseNumber', '$CourseName' , '$UnitNumber', '$Description', '$KeyTopics', '$CourseGoals', '$DepartmentNumber')";
+//}
+
+$sql2 = "UPDATE course 
+SET UnitNumber=".$UnitNumber.", Dnumber=".$DepartmentNumber.", Description='".$Description."', Cgoals='".$CourseGoals."', keyTopics='".$KeyTopics ."', Cname='".$CourseName."'
+WHERE Cnumber=".$CourseNumber;
 
 if ($conn->query($sql2) === TRUE) {
 echo '<script type="text/javascript">
-alert("New course added successfully");
-location="http://www.dbproject14.net/Project/AddCourseForm.php";
+alert("Course edited successfully");
+location="http://www.dbproject14.net/Project/AdminViewCourses.php";
 </script>';
 } else {
 echo "<br>Error: " . $sql2 . "<br>" . $conn->error;

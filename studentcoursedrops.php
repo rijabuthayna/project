@@ -129,9 +129,14 @@ background-image: url("tprint.png");
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
 
-<h2 class="topright2">For andrewid </h2> 
+<h2 class="topright2">
+<?php
+echo "For ".$_SESSION['username']." !</h2>";
 
-<h2 class="topright3"><a href="http://www.dbproject14.net/Project/Scourselist.php">Logout</a></h2> 
+?>
+ 
+
+<h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
 
 <h2 class="topleft2">  Qatar </h2>

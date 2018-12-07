@@ -1,8 +1,8 @@
 <?php
-//CourseDelete.php
+//StudentDelete.php
 //This script will take a courseid then delete the course
 
-$courseid=$_POST['Cnumber'];
+$AndrewID=$_POST['AndrewID'];
 
 $dbServerName = "localhost";
 $dbUsername = "inclass6bmulla";
@@ -16,13 +16,13 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 
-$sql2 = "DELETE FROM course WHERE Cnumber=".$courseid;
+$sql2 = "DELETE FROM student WHERE SandrewID='".$AndrewID."'";
 
 
 if ($conn->query($sql2) === TRUE) {
 echo '<script type="text/javascript">
-alert("Course deleted successfully");
-location="http://www.dbproject14.net/Project/AdminViewCourses.php";
+alert("Student deleted successfully");
+location="http://www.dbproject14.net/Project/AdminViewStudents.php";
 </script>';
 } else {
 echo "<br>Error: " . $sql2 . "<br>" . $conn->error;

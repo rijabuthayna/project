@@ -229,49 +229,42 @@ background-image: url("tprint.png");
   </tr>
   </table>
 </font>
+<?php
+echo'
+<h3>Edit Course Form for course '.$_POST['Cnumber'].'</h3>
 
-<h3>Edit Course Form</h3>
-
-<form method='POST' action="AddCourseFormScript.php" id="courseform"> 
-Course Number: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="text" style="height:25px;" name="CourseNumber"> 
-<br/>
+<form method="POST" action="EditCourseFormScript.php" id="courseform"> 
+<input type="hidden" name="Cnumber" value="'.$_POST['Cnumber'].'"> 
 Course Name: &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="text" style="height:25px;" name="CourseName"> 
 <br/>
 Unit Number: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="text" style="height:25px;" name="UnitNumber"> 
+<input type="text" style="height:25px;" name="UnitNumber" > 
 <br/>
-Department Number: <input type="text" style="height:25px;" name="DepartmentNumber"> 
+Department Number: <input type="text" style="height:25px;" name="DepartmentNumber" > 
 <br/>
 Description: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-<textarea rows="4" cols="47" name="Description" form="usrform">
+<textarea rows="4" cols="47" name="Description" form="courseform">
 Enter description here...</textarea>
 <br>
 Key Topics: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-<textarea rows="4" cols="47" name="KeyTopics" form="usrform">
+<textarea rows="4" cols="47" name="KeyTopics" form="courseform">
 Enter key topics here...</textarea>
 <br>
 Course Goals: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-<textarea rows="4" cols="47" name="CourseGoals" form="usrform">
+<textarea rows="4" cols="47" name="CourseGoals" form="courseform">
 Enter course goals here...</textarea>
 
 
-
-<!-- 
-We will need a hidden thingie to save the andrew ID and we will use php here
-<php>
-*andrewID = [INSERT CODE THAT FETCHES THE CURRENT ANDREWID]
-echo "<input type='hidden' name='andrewID' value=".$andrewID." />";
-
--->
+';
+?>
 <br/>
 
 <input type="submit" class="b1" value="Submit"> 

@@ -253,16 +253,11 @@ Grade or pass/fail: <select name="GOPF">
 Grade: 
 <input type="text" style="height:25px;" name="grade"> 
 <br/>
+Taken Semester:
+<input type="text" style="height:25px;" name="tsem"> 
+<br/>
 
 
-
-<!-- 
-We will need a hidden thingie to save the andrew ID and we will use php here
-<php>
-*andrewID = [INSERT CODE THAT FETCHES THE CURRENT ANDREWID]
-echo "<input type='hidden' name='andrewID' value=".$andrewID." />";
-
--->
 <br/>
 
 <input type="submit" class="b1" value="Submit"> 

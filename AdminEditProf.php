@@ -10,7 +10,7 @@ location="http://www.dbproject14.net/Project/login.html";
 <!DOCTYPE html> 
 <html>
 <style>
-/* Admin Edit Section */
+/* Admin edit Professor */
 /*dropdown list*/
 .dropbtn {
 background-color:DarkRed;
@@ -179,6 +179,7 @@ background-image: url("tprint.png");
 
 </div>
 
+
 <div class="upper" align="center">
 <font size="4">
 <table style="width:100%" bgcolor="DarkRed">
@@ -224,38 +225,25 @@ background-image: url("tprint.png");
   
   
   
+  
 
 
   </tr>
   </table>
 </font>
 <?php
-echo '<h3>Edit Section Form for section '.$_POST['Skey'].', of course '.$_POST['Cnumber'].', of semester '.$_POST['Semester'].' </h3>
-
-<form method="POST" action="EditSectionFormScript.php" > 
-
-<input type="hidden"  name="Skey" value="'.$_POST['Skey'].'"> 
-<input type="hidden"  name="Cnumber" value="'.$_POST['Cnumber'].'"> 
-<input type="hidden"  name="Semester" value="'.$_POST['Semester'].'"> 
-Add Deadline: 
-<input type="text" style="height:25px;" name="AddDeadline"> 
-<br/>
-Student Capacity: 
-<input type="text" style="height:25px;" name="StudentCap"> 
-<br/>
-Waitlist Limit: <input type="text" style="height:25px;" name="WaitlistLim"> 
-<br/>
-Section StartDate: <input type="text" style="height:25px;" name="SectionStart"> 
-<br/>
-Section EndDate: <input type="text" style="height:25px;" name="SectionEnd"> 
-<br/>
-Drop Deadline: <input type="text" style="height:25px;" name="DropDead"> 
-
+echo "<h3>Edit Professor ".$_POST['AndrewID']."</h3>";
+echo'
+<form method="POST" action="EditProfFS.php"> 
+<input type="hidden" name="AndrewID" value="'.$_POST['AndrewID'].'"> 
 <br/>';
-
 ?>
-
-
+First Name: <input type="text" style="height:25px;" name="firstname"> 
+<br/>
+Last Name: <input type="text" style="height:25px;" name="lastname"> 
+<br/>
+Department Number: <input type="text" style="height:25px;" name="dnumber"> 
+<br/>
 <br/>
 
 <input type="submit" class="b1" value="Submit"> 

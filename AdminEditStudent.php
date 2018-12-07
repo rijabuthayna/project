@@ -231,14 +231,16 @@ background-image: url("tprint.png");
   </tr>
   </table>
 </font>
+<?php
+echo '<h3>Edit Student '.$_POST['AndrewID'].' Form </h3>
 
-<h3>Edit Student Form </h3>
 
 
+<form method="POST" action="EditStudentFormScript.php" > ';
 
-<form method='POST' action="AddStudentFormScript.php" > 
-Andrew ID:
-<input type="text" style="height:25px;" name="AndrewID"> 
+echo "
+<input type='hidden' name='AndrewID' value='".$_POST['AndrewID']."'> ";
+?>
 <br/>
 First Name: <input type="text" style="height:25px;" name="firstname"> 
 <br/>

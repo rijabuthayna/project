@@ -8,9 +8,38 @@ location="http://www.dbproject14.net/Project/login.html";
 }
 ?>
 <!DOCTYPE html> 
-<html> 
-
+<html>
 <style>
+/* student Change Password */
+/*dropdown list*/
+.dropbtn {
+background-color:DarkRed;
+    color: Black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
 .b1 {
 color:#FFFFFF;
@@ -29,6 +58,13 @@ background-color: #4CAF50;
 color:#FFFFFF;
 background-color:#228300;
 }
+
+.dropdown-content a:hover {color:DarkRed;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color:#FAF6F1;}
+/*dropdown list*/
 
 /* unvisited link */
 a:link {
@@ -96,10 +132,10 @@ table, th, td {
 font-size: 24px;
 position: absolute;
 top: 15.5%;
-  left:10.9%;
+  left: 10.9%;
 margin: auto;
     width: 50%;
-    height: 800px;
+    height: 600px;
     width: 1000px;
         background-color: #FAF6F1;
         
@@ -119,7 +155,8 @@ margin: auto;
 body{
 color: #92a8d1;
 background-image: url("tprint.png");
-}
+} 
+
 </style> 
 <head> 
 <title></title> 
@@ -129,9 +166,7 @@ background-image: url("tprint.png");
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
 
-<h2 class="topright2">
-
-<h2 class="topright2">For <?php echo $_SESSION['username'];?> </h2> 
+<h2 class="topright2">For <?php echo $_SESSION['username'];?> </h2>  
 
 <h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
@@ -142,8 +177,9 @@ background-image: url("tprint.png");
 <br/>
 <br/>
 
-
 </div>
+
+
 <div class="upper" align="center">
 <table style="width:100%" bgcolor="DarkRed">
   <tr>
@@ -153,79 +189,24 @@ background-image: url("tprint.png");
     <th><a href="http://www.dbproject14.net/Project/StudentRegistrationList.php">Registrations</a></th> 
     <th><a href="http://www.dbproject14.net/Project/studentcoursedrops.php">View Course Drops </a> </th>
 
-  </tr>
-  </table>
-<h3>These are Andrewid's courses! </h3>
-<br>
-
-	<table style="width:100%" font-size: 24px;>
-  <tr>
-    <th>Course Number</th>
-    <th>Course Name</th> 
-    <th>Course Sections</th>
-    <th>Unit Number</th>
-    <th>View Course Profile or Drop</th>
+    
     
 
   </tr>
-<!-- Sample row -->  
-  <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
+  </table>
+<?php
+echo "<h3>Change Password for ". $_SESSION['username']."</h3>";
+?>
+<form method='POST' action="studentchangeFS.php"> 
+Old Password: <input type="text" style="height:25px;" name="OldPass"> 
+<br/>
+New Password:	 <input type="text" style="height:25px;" name="NewPass"> 
+<br/>
+<br/>
 
--->
-<input type="submit" class="b1" value="View"> 
-</form> 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form> 
-  </th> 
-
-  
-  </tr>
-<!-- Sample row end --> 
-
-<!-- Sample row -->  
-  <tr>
-  <th>15112</th>
-  <th>Python</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
-
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
-
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
+<input type="submit" class="b1" value="Submit"> 
 </form>
-  </th> 
-
-  
-  </tr>
-<!-- Sample row end --> 
-
-</table>
-
-
 
 </div>
-
 </body> 
 </html> 

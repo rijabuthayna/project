@@ -119,7 +119,6 @@ body{
 color: #92a8d1;
 background-image: url("tprint.png");
 } 
-
 </style> 
 <head> 
 <title></title> 
@@ -128,49 +127,48 @@ background-image: url("tprint.png");
 <body> 
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
+ 
+<h2 class="topright2">
+<?php
+echo "For ".$_SESSION['username']." !</h2>";
 
-<h2 class="topright2">For andrewid </h2> 
+?>
 
 <h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
-
 <h2 class="topleft2">  Qatar </h2>
 <br/>
 <br/>
 <br/>
 <br/>
-
 </div>
-
 <div class="upper" align="center">
 <font size="4">
 <table style="width:100%" bgcolor="DarkRed">
   <tr>
-  <th> <div class="dropdown">
-  
+  <th> <div class="dropdown"> 
   <div class="dropdown-content">
     <a href="http://www.dbproject14.net/Project/profprofileview.php">My profile</a>
-    <br/>
-    
+    <br/>  
   </div>
   </div>
   </th> 
-  
-  
-  
   <th> <div class="dropdown">
+  <div class="dropdown-content">
+    <a href="http://www.dbproject14.net/Project/profviewcourses.php">My Sections & Courses</a>   
+  </div>
+  </div>
+  </th>
+    
+    <th> <div class="dropdown">
   
   <div class="dropdown-content">
-    <a href="http://www.dbproject14.net/Project/profviewcourses.php">My Sections & Courses</a>
+    <a href="http://www.dbproject14.net/Project/profviewenroll.php">View Regs & Waitlists</a>
     
   </div>
   </div>
   </th>
-  
-
-
-
-
+    
     <th> <div class="dropdown">
   
   <div class="dropdown-content">
@@ -185,34 +183,35 @@ background-image: url("tprint.png");
   </table>
 </font>
 
-<h3>My Courses </h3>
+<h3>My Course Registrations </h3>
+<form method='POST' action="viewing.php"> 
+<h6>Course number: </h6> 
+<input type="text" style="height:25px;" name="CourseNumber">
+<h6>Section Key: </h6> 
+<input type="text" style="height:25px;" name="section">
+<h6>Semester: </h6> 
+<input type="text" style="height:25px;" name="sem">
+<br/>
+<br/>
+<input type="submit" class="b1" value="View Registered Students"> 
+</form>
 <br>
 
-	<table style="width:100%" font-size: 24px;>
-  <tr>
-    <th>Course Number</th>
-    <th>Course Name</th> 
-    <th>Course Section</th>
-    <th>Enrolled Andrew ID's</th>
-    <th>Waitlisted Andrew ID's </th>
-    
-    
 
-  </tr>
-<!-- Sample row -->  
-  <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th> W </th>
-  <th>ryoosufa</th>
-  <th>maimoons, akamili </th>
-  
-  
-  </tr>
-<!-- Sample row end --> 
-</table>
-<br>
-<br>
+
+
+<h3>My Course Waitlists </h3>
+<form method='POST' action="viewingwaitlist.php"> 
+<h6>Course number: </h6> 
+<input type="text" style="height:25px;" name="CourseNumber">
+<h6>Section Key: </h6> 
+<input type="text" style="height:25px;" name="section">
+<h6>Semester: </h6> 
+<input type="text" style="height:25px;" name="sem">
+<br/>
+<br/>
+<input type="submit" class="b1" value="View Waitlisted Students"> 
+</form>
 <br>
 <br>
 </div>

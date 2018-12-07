@@ -1,3 +1,12 @@
+<?php
+session_start();
+if($_SESSION['type']!='student'){
+echo '<script type="text/javascript">
+alert("You do not have access to this page, log in again");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+?>
 <!DOCTYPE html> 
 <html> 
 
@@ -90,7 +99,6 @@ top: 15.5%;
   left:10.9%;
 margin: auto;
     width: 50%;
-    height: 800px;
     width: 1000px;
         background-color: #FAF6F1;
         
@@ -120,7 +128,12 @@ background-image: url("tprint.png");
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
 
-<h2 class="topright2">For andrewid </h2> 
+<h2 class="topright2">
+<?php
+echo "For ".$_SESSION['username']." !</h2>";
+
+?>
+
 
 <h2 class="topright3"><a href="http://www.dbproject14.net/Project/Scourselist.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
@@ -142,61 +155,139 @@ background-image: url("tprint.png");
 
   </tr>
   </table>
-<h3>Profile of course name, course number </h3>
+  
+  
+<?php
 
-<h4>Unit number is: ## </h4>
+$dbServerName = "localhost";
+$dbUsername = "inclass6bmulla";
+$dbPassword = "admin";
+$dbName = "sio_rb";
 
-<h4> Section List </h4>
-<br>
-	<table style="width:100%" font-size: 24px;>
+// create connection
+$conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+//sql statement to select one guest based on last name
+$sql = "SELECT * FROM course WHERE Cnumber=".$_POST['Cnumber'];
+$result = $conn->query($sql);
+
+//if ($result->num_rows != 1) {
+//echo '<script type="text/javascript">
+//alert("We have two records with taht course number");
+//location="http://www.dbproject14.net/Project/AdminViewCourses.php";
+//</script>';
+//}
+
+$row = $result->fetch_assoc();
+
+echo"
+
+<h3>Profile of ".$row['Cname'].", ".$_POST['Cnumber']." </h3>
+
+<h4>Unit number is: ".$row['UnitNumber']."</h4>
+<h4>Department number is: ".$row['Dnumber']."</h4>
+
+<h4> Section List </h4>";
+
+//we are now connecting again to look at the section
+
+$sql2 = "SELECT * FROM section WHERE Cnumber=".$_POST['Cnumber'];
+$result2 = $conn->query($sql2);
+
+if ($result2->num_rows > 0) {
+echo "<font size='3'>
+	<table style='width:100%';>
   <tr>
-    <th>Course Number</th>
-    <th>Course Name</th> 
-    <th>Course Sections</th>
-    <th>Unit Number</th>
-    <th>Semesters Offered</th>
-<th>Section key</th>
-    
+    <th>Section key</th>
+    <th>Instructor AndrewID(s)</th>
     <th>Add Deadline</th> 
     <th>Student Capacity</th>
     <th>Waitlist Limit</th>
     <th>Section StartDate</th>
     <th>Section EndDate</th>
-    <th>Drop Deadline</th>    
+    <th>Drop Deadline</th>
+    <th>Semester</th>
+    <th>Register</th>
+    <th>View Section profile</th>
 
-  </tr>
-<!-- Sample row -->  
+  </tr>  ";
+while($row2 = $result2->fetch_assoc()) { 
+  echo"
   <tr>
-  <th>21127</th>
-  <th>Concepts</th>
-  <th>W</th>
-  <th>9</th>
-<th>Fall 2016,Spring 2017</th>
-<th> -- </th>
-<th>25-1-2018</th>
-<th>55</th>
-<th> 10 </th>
-<th>25-1-2018</th>
-    <th>25-5-2018</th>
-<th>2-2-2018</th>  
-  </tr>
-<!-- Sample row end --> 
-</table>
-<h4> Course Description </h4>
-<h5> asdasd fdsffe fdfds vdsfsfs fdsfdsfds fdsfdsfds fdsfdsfds csdvgbthn nhtnyujfvd vfrynu vdvfdvd sdcsdvdsv </h5>
+    <th>".$row2['Skey'] ."</th><th>";
 
-<h4> Key Topics </h4>
-<h5> asdasd fdsffe fdfds vdsfsfs fdsfdsfds fdsfdsfds fdsfdsfds csdvgbthn nhtnyujfvd vfrynu vdvfdvd sdcsdvdsv </h5>
+//WE will have a third connection to read the teaching table
+$sql3 = "SELECT * FROM teaches WHERE Cnumber= ".$_POST['Cnumber']." AND Skey='".$row2['Skey']."' AND Semester='".$row2['Semester']."'";
+$result3 = $conn->query($sql3);
 
-<h4> Course Goals </h4>
-<h5> asdasd fdsffe fdfds vdsfsfs fdsfdsfds fdsfdsfds fdsfdsfds csdvgbthn nhtnyujfvd vfrynu vdvfdvd sdcsdvdsv </h5>
+if ($result3->num_rows > 0) {
+
+while($row3 = $result3->fetch_assoc()) { 
+echo $row3['PandrewID'].", ";
+}
+}
+  echo "</th>
+    <th>".$row2['adddeadline']."</th> 
+    <th>".$row2['studentcap']."</th>
+    <th>".$row2['waitlistlim']."</th>
+    <th>".$row2['SectionStartDate']."</th>
+    <th>".$row2['SectionEndDate']."</th>
+    <th>".$row2['dropdeadline']."</th>
+    <th>".$row2['Semester']."</th>";
+    
+    
+    
+echo"  <th>
+<form method='POST' action='SAddReg.php'> 
+<input type='hidden' name='Skey' value=".$row2['Skey'].">
+<input type='hidden' name='Cnumber' value=".$_POST['Cnumber'].">
+<input type='hidden' name='Semester' value=".$row2['Semester'].">
+<input type='hidden' name='AndrewID' value='".$_SESSION['username']."'> 
+<input type='submit' class='b1' value='Add'> 
+</form>  
+  </th>";
+
+echo"
+<th>
+<form method='POST' action='SSectionProfile.php'> 
+<input type='hidden' name='Skey' value=".$row2['Skey'].">
+<input type='hidden' name='Cnumber' value=".$_POST['Cnumber'].">
+<input type='hidden' name='Semester' value=".$row2['Semester'].">
+<input type='submit' class='b1' value='View'> 
+</form> ";
+
+}
+echo "</table>
+</font>";
+}
+else {
+echo "<h4>This course does not have any sections yet</h4>";
+
+}
+
+if (isset($row['Description'])){
+echo "<h4> Course Description </h4>
+<h5> ".$row['Description'] ."</h5>";
+}
+if (isset($row['KeyTopics'])){
+echo "<h4> Key Topics </h4>
+<h5> ".$row['KeyTopics'] ."</h5>";
+}
+if (isset($row['Cgoals'])){
+echo "<h4> Course Goals </h4>
+<h5> ".$row['Cgoals'] ."</h5>";
+}
+
+?>
 
 </div>
 
 </body> 
 </html>
-
-
 
 
 

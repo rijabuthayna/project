@@ -112,8 +112,11 @@ table, th, td {
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
 
-<h2 class="topright2">For andrewid </h2> 
+<h2 class="topright2">
+<?php
+echo "For ".$_SESSION['username']." !</h2>";
 
+?>
 <h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
 
@@ -124,66 +127,26 @@ table, th, td {
 <br/>
 
 </div>
-
 <div class="upper" align="center">
-<font size="4">
 <table style="width:100%" bgcolor="DarkRed">
   <tr>
-  <th> <div class="dropdown">
-  
-  <div class="dropdown-content">
-    <a href="http://www.dbproject14.net/Project/profprofileview.php">My profile</a>
-    <br/>
     
-  </div>
-  </div>
-  </th> 
-  
-  
-  
-  <th> <div class="dropdown">
-  
-  <div class="dropdown-content">
-    <a href="http://www.dbproject14.net/Project/profviewcourses.php">My Sections & Courses</a>
+    <th>    <a href="http://www.dbproject14.net/Project/profprofileview.php">My profile</a> </th>
+    <th>    <a href="http://www.dbproject14.net/Project/profviewcourses.php">My Sections & Courses</a></th>
+    <th>    <a href="http://www.dbproject14.net/Project/profviewenroll.php">View Regs & Waitlists</a></th> 
+    <th>    <a href="http://www.dbproject14.net/Project/profviewdrops.php">View Drops</a></th>
+
     
-  </div>
-  </div>
-  </th>
-  
-
-    <th> <div class="dropdown">
-  
-  <div class="dropdown-content">
-    <a href="http://www.dbproject14.net/Project/profviewenroll.php">Enrollments & Registrations</a>
     
-  </div>
-  </div>
-  </th>
-
-
-
-
-    <th> <div class="dropdown">
-  
-  <div class="dropdown-content">
-    <a href="http://www.dbproject14.net/Project/profviewdrops.php">View Drops</a>
-    
-  </div>
-  </div>
-  </th>
-  
-  
-
 
   </tr>
   </table>
-</font>
+<?php
+echo "<h3>Welcome ".$_SESSION['username']." !</h3>";
 
-<h3>Welcome [INSERT ANDREWID]! </h3>
+?>
 
 </div>
 
-
-
-</body>
-</html>
+</body> 
+</html> 

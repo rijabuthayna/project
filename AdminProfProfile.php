@@ -233,6 +233,7 @@ background-image: url("tprint.png");
 <h3>View Courses taught by <?php echo $_POST['AndrewID']; ?> </h3>
 
 <br>
+<!--
 <h4>Add New Section to teach</h4>
 <form method='POST' action="AddteachingForm.php"> 
 Course Number: <input type="text" style="height:25px;" name="CourseNumber"> 
@@ -243,7 +244,8 @@ Semester: <input type="text" style="height:25px;" name="semester">
 <br/>
 <br/>
 <input type="submit" class="b1" value="Add"> 
-</form>  
+</form> 
+--> 
 <br>
 <h4>Sections list</h4>
 

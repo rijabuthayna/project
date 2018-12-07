@@ -10,7 +10,18 @@ location="http://www.dbproject14.net/Project/login.html";
 <!DOCTYPE html> 
 <html>
 <style>
-
+.b1 {
+color:#FFFFFF;
+display:inline-block;
+padding:0.3em 1.2em;
+margin:0 0.1em 0.1em 0;
+border:0.16em solid rgba(255,255,255,0);
+border-radius:2em;
+box-sizing: border-box;
+font-size: 16px;
+background-color: #4CAF50;
+ 
+}
 
 /* unvisited link */
 a:link {
@@ -112,7 +123,12 @@ background-image: url("tprint.png");
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
 
-<h2 class="topright2">For andrewid </h2> 
+<h2 class="topright2">
+<?php
+echo "For ".$_SESSION['username']." !</h2>";
+
+?>
+
 
 <h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
@@ -159,7 +175,7 @@ echo "<h3>Your Andrew ID is ".$_SESSION['username']."</h3>";
   <th>Preferred name</th>
   <th>Max units carried</th>
   <th>Nationality</th>
-    
+   <th>Edit My info</th> 
  
   </tr>
 
@@ -190,16 +206,28 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 
 while($row = $result->fetch_assoc()) {
-echo "<tr>".
-  "<th>".$row["Sfirstname"]."</th>".
-  "<th>".$row["Slastname"]."</th>".
-  "<th>".$row["Sphonenumber"]."</th>".
-  "<th>".$row["Sbirthdate"]."</th>".
-  "<th>".$row["Sgender"]."</th>".
-  "<th>".$row["Spreferredname"]."</th>".
-  "<th>".$row["Smaxunit"]."</th>".
+echo "
+  <tr>
+   
+    <th>".$row["Sfirstname"]."</th>
+    <th>".$row["Slastname"]."</th>
+    <th>".$row["Sphonenumber"]."</th>
+    <th>".$row["Sbirthdate"]."</th>
+    <th>".$row["Sgender"]."</th>
+    <th>".$row["Spreferredname"]."</th> 
+    <th>".$row["Smaxunit"]."</th>
+    <th>".$row["Snationality"]."</th>
+  <th>
+<form method='POST' action='SEditStudent.php'> 
+<input type='hidden' name'AndrewID' value=".$_SESSION['username'].">
+<input type='submit' class='b1' value='Edit'> 
+</form>  
+  </th>
+
+
   
-  "<th>".$row["Snationality"]."</th> </tr>";
+  </tr>";
+  
 
 
 
@@ -211,7 +239,7 @@ echo "</table>";
 $conn->close();           
 ?>
 <br/>
-<a href="http://www.dbproject14.net/Project/profchangepass.php">Change My Password</a>
+<a href="http://www.dbproject14.net/Project/studentchangepass.php">Change My Password</a>
 
 </div>
 </body> 

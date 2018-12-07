@@ -129,9 +129,14 @@ background-image: url("tprint.png");
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
 
-<h2 class="topright2">For andrewid </h2> 
+<h2 class="topright2">
+<?php
+echo "For ".$_SESSION['username']." !</h2>";
 
-<h2 class="topright3"><a href="http://www.dbproject14.net/Project/Scourselist.php">Logout</a></h2> 
+?>
+ 
+
+<h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
 
 <h2 class="topleft2">  Qatar </h2>
@@ -154,66 +159,60 @@ background-image: url("tprint.png");
 
   </tr>
   </table>
-<h3>These are the available courses! </h3>
+<h3>Course List </h3>
 <br>
 
-	<table style="width:100%" font-size: 24px;>
+<?php
+
+$dbServerName = "localhost";
+$dbUsername = "inclass6bmulla";
+$dbPassword = "admin";
+$dbName = "sio_rb";
+
+// create connection
+$conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+//sql statement to select one guest based on last name
+$sql = "SELECT * FROM course";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+echo "
+	<table style='width:100%' font-size: 24px;>
   <tr>
     <th>Course Number</th>
     <th>Course Name</th> 
-    <th>Course Sections</th>
     <th>Unit Number</th>
     <th>View Course Profile</th>
-    
 
-  </tr>
-<!-- Sample row -->  
-  <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
+  </tr>";
+while($row = $result->fetch_assoc()) {
+echo "  <tr>".
+  "<th>".$row["Cnumber"]."</th>".
+  "<th>".$row["Cname"]."</th>".
+  "<th>".$row["UnitNumber"]."</th>";
 
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
-  </th> 
-
+echo  "<th>
+<form method='POST' action='studentcourseprofile.php'>
+<input type='hidden' name='Cnumber' value=". $row["Cnumber"].">
+<input type='submit' class='b1' value='View'> 
+</form> 
+  </th>";
   
-  </tr>
-<!-- Sample row end --> 
+}
+echo "</table>";
+} else {
+echo "<br>We do not offer any courses currently";
+}
 
-<!-- Sample row -->  
-  <tr>
-  <th>15112</th>
-  <th>Python</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
+$conn->close();
+?>
 
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
-  </th> 
 
-  
-  </tr>
-<!-- Sample row end --> 
-
-</table>
 </div>
 
 </body> 

@@ -272,6 +272,7 @@ echo"
 </form>  
 <br>";
 
+
 //we are now connecting again to look at the section
 
 $sql2 = "SELECT * FROM section WHERE Cnumber=".$_POST['Cnumber'];

@@ -1,10 +1,18 @@
 <?php
-//we add a registration
+session_start();
+if($_SESSION['type']!='student'){
+echo '<script type="text/javascript">
+alert("You do not have access to this page, log in again");
+location="http://www.dbproject14.net/Project/login.html";
+</script>';
+}
+//we add a registration for logged in student
+
 
 $Skey = $_POST['Skey']; 
 $Cnumber = $_POST['Cnumber']; 
 $Semester = $_POST['Semester']; 
-$AndrewID = $_POST['AndrewID']; 
+$AndrewID = $_SESSION['username']; 
 
 //This one is true if AndrewID is empty
 $err01=false;
@@ -133,14 +141,14 @@ $err05S="unable to register as student will go over units, ";
 if ($err01  or $err02 or $err22){
 echo '<script type="text/javascript">
 alert("'.$err01S.$err02S.$err22S.'");
-location="http://www.dbproject14.net/Project/AdminViewCourses.php";
+location="http://www.dbproject14.net/Project/Scourselist.php";
 </script>';
 }
 //if student will go over her units
 else if($err05){
 echo '<script type="text/javascript">
 alert("'.$err05S.'");
-location="http://www.dbproject14.net/Project/AdminViewCourses.php";
+location="http://www.dbproject14.net/Project/Scourselist.php";
 </script>';
 }
 //if the capacity is full
@@ -150,7 +158,7 @@ else if ($err03){
 if($err04){
 echo '<script type="text/javascript">
 alert("Class is full and waitlist is full");
-location="http://www.dbproject14.net/Project/AdminViewCourses.php";
+location="http://www.dbproject14.net/Project/Scourselist.php";
 </script>';}
 //here we add student to waitlist
 else {
@@ -161,7 +169,7 @@ $sql2 = "INSERT INTO register VALUES ('$AndrewID', '$Skey' , $Cnumber, '$Semeste
 if ($conn->query($sql2) === TRUE) {
 echo '<script type="text/javascript">
 alert("Class is full student added to waitlist");
-location="http://www.dbproject14.net/Project/AdminViewCourses.php";
+location="http://www.dbproject14.net/Project/Scourselist.php";
 </script>';
 }
 }
@@ -174,7 +182,7 @@ $sql2 = "INSERT INTO register VALUES ('$AndrewID', '$Skey' , $Cnumber, '$Semeste
 if ($conn->query($sql2) === TRUE) {
 echo '<script type="text/javascript">
 alert("Student is registered successfully");
-location="http://www.dbproject14.net/Project/AdminViewCourses.php";
+location="http://www.dbproject14.net/Project/Scourselist.php";
 </script>';
 } else {
 echo "<br>Error: " . $sql2 . "<br>" . $conn->error;

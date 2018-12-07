@@ -8,10 +8,45 @@ location="http://www.dbproject14.net/Project/login.html";
 }
 ?>
 <!DOCTYPE html> 
-<html> 
-
+<html>
 <style>
+/* Add student form */
+/*dropdown list*/
+.dropbtn {
+background-color:DarkRed;
+    color: Black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {color:DarkRed;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color:#FAF6F1;}
+/*dropdown list*/
 .b1 {
 color:#FFFFFF;
 display:inline-block;
@@ -29,7 +64,6 @@ background-color: #4CAF50;
 color:#FFFFFF;
 background-color:#228300;
 }
-
 /* unvisited link */
 a:link {
     color: Black;
@@ -96,10 +130,10 @@ table, th, td {
 font-size: 24px;
 position: absolute;
 top: 15.5%;
-  left:10.9%;
+  left: 10.9%;
 margin: auto;
     width: 50%;
-    height: 800px;
+    height: 600px;
     width: 1000px;
         background-color: #FAF6F1;
         
@@ -108,6 +142,7 @@ margin: auto;
 .upper2 {
 font-size: 24px;
 position: relative;
+left: 0%;
 
 margin: auto;
     width: 50%;
@@ -119,7 +154,8 @@ margin: auto;
 body{
 color: #92a8d1;
 background-image: url("tprint.png");
-}
+} 
+
 </style> 
 <head> 
 <title></title> 
@@ -128,8 +164,6 @@ background-image: url("tprint.png");
 <body> 
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
-
-<h2 class="topright2">
 
 <h2 class="topright2">For <?php echo $_SESSION['username'];?> </h2> 
 
@@ -142,8 +176,8 @@ background-image: url("tprint.png");
 <br/>
 <br/>
 
-
 </div>
+
 <div class="upper" align="center">
 <table style="width:100%" bgcolor="DarkRed">
   <tr>
@@ -153,79 +187,44 @@ background-image: url("tprint.png");
     <th><a href="http://www.dbproject14.net/Project/StudentRegistrationList.php">Registrations</a></th> 
     <th><a href="http://www.dbproject14.net/Project/studentcoursedrops.php">View Course Drops </a> </th>
 
-  </tr>
-  </table>
-<h3>These are Andrewid's courses! </h3>
-<br>
-
-	<table style="width:100%" font-size: 24px;>
-  <tr>
-    <th>Course Number</th>
-    <th>Course Name</th> 
-    <th>Course Sections</th>
-    <th>Unit Number</th>
-    <th>View Course Profile or Drop</th>
+    
     
 
   </tr>
-<!-- Sample row -->  
-  <tr>
-  <th>15150</th>
-  <th>ML</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
+  </table>
 
--->
-<input type="submit" class="b1" value="View"> 
-</form> 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
-</form> 
-  </th> 
+<h3>Edit My Info </h3>
 
-  
-  </tr>
-<!-- Sample row end --> 
 
-<!-- Sample row -->  
-  <tr>
-  <th>15112</th>
-  <th>Python</th>
-  <th>W, X</th>
-  <th>12</th>
-  <th>
-<form method='POST' action="studentcourseprofile.php"> 
-<!-- 
-We will need a hidden thingie to save the course ID and we will use php here
-<php>
-*courseID = [INSERT CODE THAT FETCHES THE CURRENT COURSEID]
-echo "<input type='hidden' name='courseID' value=".$courseID." />";
 
--->
-<input type="submit" class="b1" value="View"> 
-</form>  
+<form method='POST' action="editFormScript.php" > 
+Andrew ID:
+<input type="text" style="height:25px;" name="AndrewID"> 
+<br/>
+First Name: <input type="text" style="height:25px;" name="firstname"> 
+<br/>
+Last Name: <input type="text" style="height:25px;" name="lastname"> 
+<br/>
+Birthdate: <input type="text" style="height:25px;" name="birthdate"> 
+<br/>
+Gender: <select name="gender">
+    <option value="F">Female</option>
+    <option value="M">Male</option>
 
-<form method='POST' action="dropmycourse.php">
-<input type="submit" class="b1" value="Drop">
+  </select>
+<br/>
+Preferred Name: <input type="text" style="height:25px;" name="preferredname"> 
+<br/>
+Max Units: <input type="text" style="height:25px;" name="maxunits"> 
+<br/>
+Nationality: <input type="text" style="height:25px;" name="nationality"> 
+
+<br/>
+<br/>
+
+<input type="submit" class="b1" value="Submit"> 
 </form>
-  </th> 
-
-  
-  </tr>
-<!-- Sample row end --> 
-
-</table>
-
-
 
 </div>
-
 </body> 
 </html> 

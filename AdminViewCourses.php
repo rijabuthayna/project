@@ -250,7 +250,7 @@ die("Connection failed: " . $conn->connect_error);
 }
 
 //sql statement to select one guest based on last name
-$sql = "SELECT Cnumber,Cname,UnitNumber FROM course";
+$sql = "SELECT * FROM course";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -290,7 +290,7 @@ echo "  <th>
 echo "
   <th>
 <form method='POST' action='CourseDelete.php'> 
-<input type='hidden' name='Cnumber' value=". $row["Cnumber"].">
+<input type='hidden' name='Cnumber' value=".$row["Cnumber"].">
 <input type='submit' class='b1' value='Delete'> 
 </form>  
   </th>   

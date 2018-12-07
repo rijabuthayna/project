@@ -112,8 +112,12 @@ background-image: url("tprint.png");
 <div class="upper2" align="center">
 <h2 class="topright">SIO(Student Information Online)</h2>
 
-<h2 class="topright2">For andrewid </h2> 
 
+<h2 class="topright2">
+<?php
+echo "For ".$_SESSION['username']." !</h2>";
+
+?>
 <h2 class="topright3"><a href="http://www.dbproject14.net/Project/logout.php">Logout</a></h2> 
 <h2 class="topleft"> Carnegie Mellon University</h2> 
 
@@ -138,7 +142,14 @@ background-image: url("tprint.png");
   </div>
   </th>
   
+  <th> <div class="dropdown">
   
+  <div class="dropdown-content">
+    <a href="http://www.dbproject14.net/Project/profprofileview.php">My Profile</a>
+    
+  </div>
+  </div>
+  </th>
    <th> <div class="dropdown">
   
   <div class="dropdown-content">
@@ -152,7 +163,7 @@ background-image: url("tprint.png");
     <th> <div class="dropdown">
   
   <div class="dropdown-content">
-    <a href="http://www.dbproject14.net/Project/profviewenroll.php">Enrollments & Registrations</a>
+    <a href="http://www.dbproject14.net/Project/profviewenroll.php">View Regs & Waitlists</a>
     
   </div>
   </div>
@@ -182,8 +193,8 @@ echo "<h3>Your Andrew ID is ".$_SESSION['username']."</h3>";
 ?>
 <table style="width:100%" font-size: 24px;>
   <tr>
-  <th>First name</th>
-  <th>Last name</th>
+  <th>First Name</th>
+  <th>Last Name</th>
   <th>Department Number</th>
   <th>Department Name</th>
     

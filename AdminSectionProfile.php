@@ -308,7 +308,7 @@ echo"  <th>
 
 echo"
   <th>
-<form method='POST' action='SectionDelete.php> 
+<form method='POST' action='SectionDelete02.php> 
 <input type='hidden' name='Skey' value=".$_POST['Skey'].">
 <input type='hidden' name='Cnumber' value=".$_POST['Cnumber'].">
 <input type='hidden' name='Semester' value=".$_POST['Semester'].">

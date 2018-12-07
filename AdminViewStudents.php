@@ -281,7 +281,7 @@ echo "
     <th>".$row["Smaxunit"]."</th>
   <th>
 <form method='POST' action='AdminEditStudent.php'> 
-<input type='hidden' name'AndrewID' value=".$row["Sandrewid"].">
+<input type='hidden' name='AndrewID' value=".$row["Sandrewid"].">
 <input type='submit' class='b1' value='Edit'> 
 </form>  
   </th>
@@ -289,7 +289,7 @@ echo "
 
   <th>
 <form method='POST' action='StudentDelete.php'> 
-<input type='hidden' name'AndrewID' value=".$row["Sandrewid"].">
+<input type='hidden' name='AndrewID' value=".$row["Sandrewid"].">
 <input type='submit' class='b1' value='Delete'> 
 </form>  
   </th>   
